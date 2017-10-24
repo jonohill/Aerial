@@ -11,8 +11,6 @@ import AVKit
 import AVFoundation
 import ScreenSaver
 
-
-
 @objc(PreferencesWindowController)
 class PreferencesWindowController: NSWindowController, NSOutlineViewDataSource,
 NSOutlineViewDelegate, VideoDownloadDelegate {
@@ -32,7 +30,7 @@ NSOutlineViewDelegate, VideoDownloadDelegate {
     
     static var loadedJSON: Bool = false
     
-    lazy var preferences = Preferences.sharedInstance
+    lazy var preferences = Preferences.shared
     
     // MARK: - Init
     
@@ -49,9 +47,9 @@ NSOutlineViewDelegate, VideoDownloadDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        if let previewPlayer = AerialView.previewPlayer {
-            self.player = previewPlayer
-        }
+//        if let previewPlayer = AerialView.previewPlayer {
+//            self.player = previewPlayer
+//        }
         
         outlineView.floatsGroupRows = false
         loadJSON()

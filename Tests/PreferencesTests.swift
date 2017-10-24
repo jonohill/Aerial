@@ -20,7 +20,7 @@ class PreferencesTests: XCTestCase {
     }
     
     func testPreferenceSaving() {
-        let preferences = Preferences.sharedInstance
+        let preferences = Preferences.shared
         preferences.cacheAerials = false
         
         let newPreferences = Preferences()

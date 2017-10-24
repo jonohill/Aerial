@@ -10,8 +10,10 @@ import Foundation
 import AVFoundation
 
 protocol VideoLoaderDelegate: NSObjectProtocol {
-    func videoLoader(_ videoLoader: VideoLoader, receivedResponse response: URLResponse)
-    func videoLoader(_ videoLoader: VideoLoader, receivedData data: Data, forRange range: NSRange)
+    func videoLoader(_ videoLoader: VideoLoader,
+                     receivedResponse response: URLResponse)
+    func videoLoader(_ videoLoader: VideoLoader,
+                     receivedData data: Data, forRange range: NSRange)
 }
 
 class VideoLoader: NSObject, NSURLConnectionDataDelegate {
@@ -229,7 +231,7 @@ class VideoLoader: NSObject, NSURLConnectionDataDelegate {
         
         let offset = offsetString.longLongValue
         
-//        debugLog("content range: \(contentRange), start offset: \(offset)")
+        debugLog("content range: \(contentRange), start offset: \(offset)")
         
         return Int(offset)
     }

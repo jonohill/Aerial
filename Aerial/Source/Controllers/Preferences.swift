@@ -20,7 +20,7 @@ class Preferences {
         case manifest = "manifest"
     }
     
-    static let sharedInstance = Preferences()
+    static let shared = Preferences()
     
     lazy var userDefaults: UserDefaults = {
         let module = "com.JohnCoates.Aerial"

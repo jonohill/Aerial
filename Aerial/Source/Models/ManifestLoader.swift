@@ -14,7 +14,7 @@ typealias manifestLoadCallback = ([AerialVideo]) -> (Void)
 class ManifestLoader {
     static let instance: ManifestLoader = ManifestLoader()
     
-    lazy var preferences = Preferences.sharedInstance
+    lazy var preferences = Preferences.shared
     var callbacks = [manifestLoadCallback]()
     var loadedManifest = [AerialVideo]()
     var playedVideos = [AerialVideo]()

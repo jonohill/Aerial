@@ -22,7 +22,7 @@ class VideoCache {
         get {
             var cacheDirectory: String?
             
-            let preferences = Preferences.sharedInstance
+            let preferences = Preferences.shared
             if let customCacheDirectory = preferences.customCacheDirectory {
                 cacheDirectory = customCacheDirectory
             } else {
@@ -138,7 +138,7 @@ class VideoCache {
     }
     
     func saveCachedVideo() {
-        let preferences = Preferences.sharedInstance
+        let preferences = Preferences.shared
         
         guard preferences.cacheAerials else {
             debugLog("Cache disabled, not saving video")
