@@ -115,7 +115,7 @@ class ManifestLoader {
             let assets = batch["assets"] as! Array<NSDictionary>
             
             for item in assets {
-                let url = item["url-4K-SDR"] as! String
+                let url = item["url-1080-SDR"] as! String
                 let name = item["accessibilityLabel"] as! String
                 let timeOfDay = "day"
                 let id = item["id"] as! String
